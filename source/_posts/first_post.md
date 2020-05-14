@@ -14,10 +14,10 @@ date: 2020-05-13 16:47:00
 首先新建一个文件夹，暂时命名为Hexo，在此文件夹下运行git bash。因为hexo初始化只能在空文件夹中进行，所以没有在克隆的github.io文件夹里进行此操作。
 
 ```bash
-npm install -g hexo-cli   # 安装hexo
-hexo init   # 初始化
-npm install   # 安装组件
-npm install hexo-deployer-git --save   # github部署工具
+$ npm install -g hexo-cli   # 安装hexo
+$ hexo init   # 初始化
+$ npm install   # 安装组件
+$ npm install hexo-deployer-git --save   # github部署工具
 ```
 
 ### 更换主题
@@ -25,7 +25,7 @@ npm install hexo-deployer-git --save   # github部署工具
 Hexo初始化的主题是landscape，我还是决定换用之前的next主题，更为简洁。这里选择了2020年最新版本的next主题。
 
 ```bash
-git clone https://github.com/next-theme/hexo-theme-next themes/next
+$ git clone https://github.com/next-theme/hexo-theme-next themes/next
 ```
 然后我们到_config.yml文件里启用next主题。
 
@@ -35,9 +35,9 @@ theme: next
 验证一下是否启用成功。
 
 ```bash
-hexo cl   # 清空hexo缓存
-hexo g   # 生成页面
-hexo s   # 启动预览
+$ hexo cl   # 清空hexo缓存
+$ hexo g   # 生成页面
+$ hexo s   # 启动预览
 ```
 
 访问 localhost:4000，博客已成功更换主题。
@@ -56,17 +56,17 @@ deploy:
 接下来，我们将github.io仓库拷贝到本地，将.git文件夹拷贝到之前的Hexo文件夹中，将Hexo作为github.io的本地文件夹，然后开始部署。此时处于默认分支hexo。
 
 ```bash
-git add .
-git commit -m "brand new start"
-git push origin hexo
-hexo g -d   # 生成网站并部署到master分支
+$ git add .
+$ git commit -m "brand new start"
+$ git push origin hexo
+$ hexo g -d   # 生成网站并部署到master分支
 ```
 
 这里还有一个小的trick。因为本来的master就是默认分支，我懒得改，就新建并设置了hexo分支用于推送博客，结果就404了。原因是hexo默认是往master分支推送文章的，所以一定要将master分支作为发布分支。
 
 第一篇博客基本上就是这样啦。重新回来还是很开心的。
 
-Hello,world!
+Hello, world!
 
 你好，世界！
 
