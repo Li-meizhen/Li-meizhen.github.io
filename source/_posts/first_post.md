@@ -64,6 +64,19 @@ $ hexo g -d   # 生成网站并部署到master分支
 
 这里还有一个小的trick。因为本来的master就是默认分支，我懒得改，就新建并设置了hexo分支用于推送博客，结果就404了。原因是hexo默认是往master分支推送文章的，所以一定要将master分支作为发布分支。
 
+### 更新博客
+
+之后就可以很方便的管理博客啦。
+
+```bash
+$ hexo n hello-world.md   # 新建博客文件
+$ hexo g -d   # 生成网站并部署到master分支
+$ git add .   # 同步原始文件
+$ git commit -m "blog posts"
+$ git push origin hexo
+
+```
+
 第一篇博客基本上就是这样啦。重新回来还是很开心的。
 
 Hello, world!
