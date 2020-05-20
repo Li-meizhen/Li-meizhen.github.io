@@ -69,7 +69,7 @@ $ hexo g -d   # 生成网站并部署到master分支
 之后就可以很方便的管理博客啦。
 
 ```bash
-$ hexo n hello-world.md   # 新建博客文件
+$ hexo n hello-world   # 新建博客文件
 $ hexo g -d   # 生成网站并部署到master分支
 $ git add .   # 同步原始文件
 $ git commit -m "blog posts"
